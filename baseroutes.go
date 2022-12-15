@@ -29,6 +29,7 @@ func Register(r *routing.Router, baseTemplate string, options ...RegisterOption)
 	r.Get("/robots.txt", fileHandler("robots.txt"))
 	r.Get("/favicon.ico", fileHandler("favicon.ico"))
 	r.Get("/apple-touch-icon.png", fileHandler("apple-touch-icon.png"))
+	r.Get("/apple-touch-icon-precomposed.png", fileHandler("apple-touch-icon.png"))
 
 	for _, opt := range options {
 		opt(r)
