@@ -32,6 +32,8 @@ func Register(r *routing.Router, baseTemplate string, options ...RegisterOption)
 	r.Get("/apple-touch-icon-precomposed.png", fileHandler("apple-touch-icon.png"))
 	r.Get("/apple-touch-icon-120x120.png", fileHandler("apple-touch-icon.png"))
 	r.Get("/apple-touch-icon-120x120-precomposed.png", fileHandler("apple-touch-icon.png"))
+	r.Get("/apple-touch-icon-152x152.png", fileHandler("apple-touch-icon.png"))
+	r.Get("/apple-touch-icon-152x152-precomposed.png", fileHandler("apple-touch-icon.png"))
 
 	for _, opt := range options {
 		opt(r)
