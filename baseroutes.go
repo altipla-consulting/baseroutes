@@ -22,8 +22,10 @@ func WithFrontend(root string) RegisterOption {
 
 func Register(r *routing.Router, baseTemplate string, options ...RegisterOption) {
 	go func() {
-		// Touch template to reload the page every time we change the Go implementation.
-		_ = os.Chtimes(baseTemplate, time.Now(), time.Now())
+		if baseTemplate != "" {
+			// Touch template to reload the page every time we change the Go implementation.
+			_ = os.Chtimes(baseTemplate, time.Now(), time.Now())
+		}
 	}()
 
 	r.Get("/robots.txt", fileHandler("robots.txt"))
