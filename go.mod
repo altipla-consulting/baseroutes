@@ -5,6 +5,7 @@ go 1.18
 require libs.altipla.consulting v1.181.0
 
 require (
+	github.com/altipla-consulting/env v0.2.2
 	github.com/getsentry/sentry-go v0.13.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
