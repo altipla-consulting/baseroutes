@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"libs.altipla.consulting/env"
+	"github.com/altipla-consulting/env"
 	"libs.altipla.consulting/routing"
 )
 
